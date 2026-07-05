@@ -16,5 +16,6 @@ jobs:
                   script: |
                       cd /home/aliane/web/portfolio
                       git pull origin main
+                      docker compose down -v --remove-orphans
                       docker compose up -d --build portfolio
                       docker exec nginx-proxy nginx -s reload
