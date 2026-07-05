@@ -6,7 +6,11 @@ export const PAGES: PagesConfig = {
         subtitle: "Research Engineer in NLP & AI",
         isActive: true,
     },
-
+    blog: {
+        title: "Blog",
+        subtitle: "Insights into AI, NLP, and Engineering.",
+        isActive: true,
+    },
     publications: {
         title: "Publications",
         subtitle: "Scientific articles in NLP and Text Processing.",
