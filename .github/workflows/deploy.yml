@@ -14,7 +14,7 @@ jobs:
                   username: ${{ secrets.SSH_USER }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   script: |
-                      cd /home/aliane/web/portfolio
+                      cd /home/aliane/web/apps/portfolio
                       git pull origin main
                       docker compose down -v --remove-orphans
                       docker compose up -d --build portfolio
