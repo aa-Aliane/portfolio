@@ -1,10 +1,8 @@
 name: Deploy to server
-
 on:
     push:
         branches: [main]
     workflow_dispatch:
-
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -16,7 +14,7 @@ jobs:
                   username: ${{ secrets.SSH_USER }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   script: |
-                      cd /path/to/portfolio
+                      cd /home/aliane/web/portfolio
                       git pull origin main
-                      docker compose up -d --build app
-                      docker exec nginx-container nginx -s reload
+                      docker compose up -d --build portfolio
+                      docker exec nginx-proxy nginx -s reload
